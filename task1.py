@@ -6,20 +6,6 @@
 # - Name
 # - Roll Number
 # - Marks for 3 subjects: Math, Physics, Chemistry
-student_data1={}
-student_data2={}
-student_data3={}
-student_data4={}
-students=[student_data1,student_data2,student_data3,student_data4]
-for student in students:
-    name = input('Enter your name : ')
-    roll_no = input('Enter your roll_no : ')
-    marks = eval(input('Enter marks for 3 subjects: Math, Physics, Chemistry as dictionary :'))
-    student['name']=name
-    student['roll_no']=roll_no
-    student['marks']=marks
-
-
 
 # 2. Store each student in a dictionary: Example:
 # {
@@ -31,13 +17,6 @@ for student in students:
 
 
 # 3. Append each student dictionary to a list.
-student_list=[]
-for student in students:
-    student_list.append(student)
-
-print(student_list)
-
-
 # 4. Print all student data using a loop.
 # Expected Output: Name: John
 # Roll No: 101 Marks:
@@ -47,8 +26,33 @@ print(student_list)
 # - input()
 # - dict and list
 # - for loop and print formatting
+student_data={}
 
-for data in student_list:
+num_of_students=int(input('Enter the number of students :'))
+
+students=[]
+
+for _ in range(num_of_students):
+    student = {}
+    marks={}
+    name = input('Enter your name : ')
+    roll_no = input('Enter your roll_no : ')
+    maths_marks = int(input('Enter your maths marks: '))
+    physics_marks = int(input('Enter your physics marks: '))
+    chemistry_marks = int(input('Enter your chemistry marks: '))
+    
+    marks['Math']=maths_marks
+    marks['Physics']=physics_marks
+    marks['Chemistry']=chemistry_marks
+
+    student['name']=name
+    student['roll_no']=roll_no
+    student['marks']=marks
+    students.append(student)
+    print()
+
+
+for data in students:
     
     print(f'Name: {data['name']}\nRoll No: {data['roll_no']}\nMarks: \nMaths: {data['marks']['Math']}\nPhysics: {data['marks']['Physics']}\nChemistry: {data['marks']['Chemistry']}')
     print()
