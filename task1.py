@@ -16,7 +16,7 @@
 
 
 
-# 3. Append each student dictionary to a list.
+# 3. Append each student dictionary to a list. 
 # 4. Print all student data using a loop.
 # Expected Output: Name: John
 # Roll No: 101 Marks:
