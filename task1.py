@@ -14,8 +14,6 @@
 # "marks": {"Math": 90, "Physics": 85, "Chemistry": 80}
 # }
 
-
-
 # 3. Append each student dictionary to a list. 
 # 4. Print all student data using a loop.
 # Expected Output: Name: John
@@ -26,6 +24,7 @@
 # - input()
 # - dict and list
 # - for loop and print formatting
+
 student_data={}
 
 num_of_students=int(input('Enter the number of students :'))
